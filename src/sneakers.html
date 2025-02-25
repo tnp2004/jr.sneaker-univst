@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="output.css?<?php echo time(); ?>">
+    <title>JR.SNEAKER</title>
+</head>
+
+<body>
+    <div class="px-5 container mx-auto">
+        <nav class="flex justify-between py-5">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <img class="w-9" src="images/jrsneaker_icon.png" alt="jr.sneaker">
+                <label class="text-2xl italic cursor-pointer" for="title">JR.SNEAKER</label>
+            </a>
+
+            <ul class="flex items-center gap-5">
+                <li><a lang="th" href="#">แนะนำ</a></li>
+                <li><a href="#">ผู้ชาย</a></li>
+                <li><a href="#">ผู้หญิง</a></li>
+                <li><a href="#">เด็ก</a></li>
+            </ul>
+
+            <ul class="flex items-center gap-5">
+                <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shopping-cart">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                    </a></li>
+                <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </a></li>
+                <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-user">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </a></li>
+            </ul>
+        </nav>
+
+        asd
+
+</body>
+</html>
+
+<script>
+    var cards = document.getElementById("cards")
+    const requestOptions = {
+        method: "GET",
+        redirect: "follow",
+    }
+
+    fetch("http://localhost/jr-sneaker/src/read_index_preview.php", requestOptions)
+    .then(res => res.text())
+    .then(result => {
+        cards.innerHTML = "";
+        var jsonObj = JSON.parse(result);
+        for (let sneaker of jsonObj) {
+            console.log(sneaker);
+            const sneakerURL = sneaker.name.toLowerCase().replaceAll(" ", "-");
+            const card = `
+            <a href="./${sneakerURL}" class="hover:drop-shadow-xl bg-white p-1 rounded">
+                <img class="w-full h-fit" src="${sneaker.imageURL}" alt="${sneaker.name}">
+                <label class="block italic" for="${sneaker.name}">${sneaker.name}</label>
+                <label class="block text-slate-600" for="price">${sneaker.price} บาท</label>
+            </a>
+            `
+        cards.insertAdjacentHTML("beforeend", card);
+        }
+    }).catch(e => console.log(e))
+</script>
