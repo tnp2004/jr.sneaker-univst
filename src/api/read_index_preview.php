@@ -11,7 +11,7 @@ try {
             'id' => $row['id'],
             'name' => $row['name'],
             'price' => $row['price'],
-            'amount' => $row['amount'],
+            'inStock' => $row['in_stock'],
             'description' => mb_substr($row['description'], 0, 100),
             'imageName' => $row['image_name'],
         );

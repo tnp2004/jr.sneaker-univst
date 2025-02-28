@@ -47,8 +47,6 @@
             return
         }
 
-        console.log(`username: ${username} | password: ${password} | confirm password: ${confirmPassword}`)
-
         const headers = new Headers();
         headers.append("Content-Type", "application/json");
 

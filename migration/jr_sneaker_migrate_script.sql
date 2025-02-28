@@ -4,12 +4,12 @@ CREATE TABLE sneakers (
     brand VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
-    amount INT NOT NULL,
+    in_stock INT NOT NULL,
     image_name VARCHAR(50) NOT NULL,
     PRIMARY KEY(id)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
-INSERT INTO sneakers (name, brand, description, price, amount, image_name) VALUES 
+INSERT INTO sneakers (name, brand, description, price, in_stock, image_name) VALUES 
 ('Air Jordan 1', 'Nike', 'สนีกเกอร์จอร์แดนสุดคลาสสิก สีแดงและขาว.', 3200.00, 15, 'air_jordan_1.webp'),
 ('Yeezy Boost 350 V2', 'Adidas', 'สนีกเกอร์ Yeezy ที่สวมใส่สบายและมีสไตล์.', 5400.00, 10, 'yeezy_boost_350_v2.webp'),
 ('Dunk Low Retro', 'Nike', 'สนีกเกอร์ Dunk ทรงเตี้ย สไตล์ย้อนยุค.', 3000.00, 5, 'dunk_low_retro.webp'),
