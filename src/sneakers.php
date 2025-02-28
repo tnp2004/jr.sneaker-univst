@@ -12,7 +12,7 @@
     <div class="px-5 container mx-auto">
         <?php include_once 'header.html'?>
         
-        <div class="flex gap-5">
+        <div class="flex gap-5 justify-center">
             <div class="w-1/5 text-xl hidden lg:block">
                 <div>
                     <label class="font-semibold" for="brand">แบรนด์</label>
@@ -124,10 +124,12 @@
             console.log(sneaker);
             const sneakerURL = sneaker.name.toLowerCase().replaceAll(" ", "-");
             const card = `
-            <a href="./${sneakerURL}" class="hover:drop-shadow-xl duration-300 bg-white p-1 rounded cursor-pointer">
-                <img class="w-full h-fit" src="images/products/${sneaker.imageName}" alt="${sneaker.name}">
+            <a href="./${sneakerURL}" class="hover:drop-shadow-xl duration-300 bg-white p-1 my-1 rounded cursor-pointer flex flex-col justify-between">
+                <img class="w-full max-h-52 h-fit object-cover" src="images/products/${sneaker.imageName}" alt="${sneaker.name}">
+               <div>
                 <label class="block italic cursor-pointer" for="${sneaker.name}">${sneaker.name}</label>
                 <label class="block text-slate-600 cursor-pointer" for="price">${sneaker.price} บาท</label>
+                </div>
             </a>
             `
         cards.insertAdjacentHTML("beforeend", card);

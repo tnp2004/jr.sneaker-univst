@@ -10,6 +10,7 @@ try {
         $sneaker = array(
             'id' => $row['id'],
             'name' => $row['name'],
+            'brand' => $row['brand'],
             'price' => $row['price'],
             'inStock' => $row['in_stock'],
             'description' => mb_substr($row['description'], 0, 100),
