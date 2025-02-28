@@ -4,16 +4,16 @@ header("Content-type: applicaiton/json; charset=UTF-8");
 require_once 'db.php';
 try {
     $sneakers = array();
-    $result = $conn->query('SELECT * FROM sneaker');
+    $result = $conn->query('SELECT * FROM sneakers');
     foreach ($result  as $row) {
         // print_r($row);
         $sneaker = array(
-            'id' => $row['sneakerID'],
+            'id' => $row['id'],
             'name' => $row['name'],
             'price' => $row['price'],
             'amount' => $row['amount'],
             'description' => mb_substr($row['description'], 0, 100),
-            'imageURL' => $row['image_url'],
+            'imageName' => $row['image_name'],
         );
         array_push($sneakers, $sneaker);
     }

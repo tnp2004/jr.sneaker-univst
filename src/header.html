@@ -1,0 +1,90 @@
+<nav class="flex justify-between py-5 lg:bg-transparent">
+    <a href="index.php" class="flex items-center gap-2 cursor-pointer">
+        <img class="w-9" src="images/jrsneaker_icon.png" alt="jr.sneaker">
+        <label class="text-2xl italic cursor-pointer" for="title">JR.SNEAKER</label>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-5">
+        <li><a href="sneakers.php">ทั้งหมด</a></li>
+        <li><a href="#">ผู้ชาย</a></li>
+        <li><a href="#">ผู้หญิง</a></li>
+        <li><a href="#">เด็ก</a></li>
+    </ul>
+
+    <ul class="flex items-center gap-5">
+        <!-- hamburger menu -->
+        <li class="relative lg:hidden">
+            <button id="menu-btn" class="align-middle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+            <div id="menu-dropdown" class="absolute hidden right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div class="py-1" role="none">
+                  <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">แนะนำ</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">ผู้ชาย</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">ผู้หญิง</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">เด็ก</a>
+                  <a href="#" class="block md:hidden px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">
+                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-shopping-cart">
+                    <circle cx="8" cy="21" r="1" />
+                    <circle cx="19" cy="21" r="1" />
+                    <path
+                        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                </svg>
+                <span>ตะกร้า</span>
+                  </a>
+                  <a href="#" class="block md:hidden px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">
+                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-heart">
+                    <path
+                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+                <span>สินค้าที่ชอบ</span>
+                  </a>
+                  <a href="#" class="block md:hidden px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">
+                    <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-user">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span>ข้อมูลส่วนตัว</span>
+                  </a>
+                </div>
+              </div>
+        </li>
+
+        <li class="hidden md:block">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-shopping-cart">
+                    <circle cx="8" cy="21" r="1" />
+                    <circle cx="19" cy="21" r="1" />
+                    <path
+                        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                </svg>
+            </a></li>
+        <li class="hidden md:block">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-heart">
+                    <path
+                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+            </a></li>
+        <li class="hidden md:block">
+            <a href="login.php">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-user">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </a></li>
+    </ul>
+</nav>
