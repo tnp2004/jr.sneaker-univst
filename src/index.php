@@ -16,7 +16,7 @@
             <div class="md:w-1/2 md:text-start text-center my-auto">
                 <label class="block text-4xl mb-3 md:text-5xl md:mb-10" for="sneaker-name">Air Max 97</label>
                 <label class="hidden md:block md:mb-10" for="price">3,500 บาท</label>
-                <button class="hidden md:block w-fit bg-gradient-to-r from-orange-400 to-amber-400 text-md text-white py-2 px-4">เพิ่มลงตะกร้า</button>
+                <button class="hidden md:block w-fit bg-gradient-to-r from-orange-400 to-amber-400 hover:from-orange-400/80 hover:to-amber-400/80 text-md text-white py-2 px-4">เพิ่มลงตะกร้า</button>
             </div>
             <a href="./air-max-97" class="md:w-1/2">
                 <img src="images/products/air_max_97.webp" alt="sneaker-image">
@@ -95,13 +95,6 @@
 </html>
 
 <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const menuDropdown = document.getElementById("menu-dropdown");
-
-    menuBtn.addEventListener("click", () => {
-        menuDropdown.classList.toggle("hidden");
-    });
-
     var cards = document.getElementById("cards")
     const requestOptions = {
         method: "GET",
@@ -114,10 +107,8 @@
         cards.innerHTML = "";
         var jsonObj = JSON.parse(result);
         for (let sneaker of jsonObj) {
-            console.log(sneaker);
-            const sneakerURL = sneaker.name.toLowerCase().replaceAll(" ", "-");
             const card = `
-            <a href="${sneakerURL}" class="hover:drop-shadow-xl duration-300 bg-white p-1 rounded cursor-pointer">
+            <a href="./sneaker.php?id=${sneaker.id}" class="hover:drop-shadow-xl duration-300 bg-white p-1 rounded cursor-pointer">
                 <img class="w-full h-fit" src="images/products/${sneaker.imageName}" alt="${sneaker.name}">
                 <label class="block italic cursor-pointer" for="${sneaker.name}">${sneaker.name}</label>
                 <label class="block text-slate-600 cursor-pointer" for="price">${sneaker.price} บาท</label>

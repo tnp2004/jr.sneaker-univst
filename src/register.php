@@ -38,7 +38,7 @@
         const formMessage = document.getElementById("form-message")
         
         if (username == "" || password == "" || confirmPassword == "") {
-            formMessage.innerHTML = "กรุณากรอกทุกช่องให้ครบถ้วน"
+            formMessage.innerHTML = "กรุณากรอกข้อมูลให้ครบถ้วน"
             return
         }
 

@@ -85,13 +85,6 @@
 </html>
 
 <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const menuDropdown = document.getElementById("menu-dropdown");
-
-    menuBtn.addEventListener("click", () => {
-        menuDropdown.classList.toggle("hidden");
-    });
-
     const sizeBtns = document.querySelectorAll(".size");
     sizeBtns.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -121,10 +114,8 @@
         cards.innerHTML = "";
         var jsonObj = JSON.parse(result);
         for (let sneaker of jsonObj) {
-            console.log(sneaker);
-            const sneakerURL = sneaker.name.toLowerCase().replaceAll(" ", "-");
             const card = `
-            <a href="./${sneakerURL}" class="hover:drop-shadow-xl duration-300 bg-white p-1 my-1 rounded cursor-pointer flex flex-col justify-between">
+            <a href="./sneaker.php?id=${sneaker.id}" class="hover:drop-shadow-xl duration-300 bg-white p-1 my-1 rounded cursor-pointer flex flex-col justify-between">
                 <img class="w-full max-h-52 h-fit object-cover" src="images/products/${sneaker.imageName}" alt="${sneaker.name}">
                <div>
                 <label class="block italic cursor-pointer" for="${sneaker.name}">${sneaker.name}</label>

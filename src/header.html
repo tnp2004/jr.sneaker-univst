@@ -5,10 +5,10 @@
     </a>
 
     <ul class="hidden lg:flex items-center gap-5">
-        <li><a href="sneakers.php">ทั้งหมด</a></li>
-        <li><a href="#">ผู้ชาย</a></li>
-        <li><a href="#">ผู้หญิง</a></li>
-        <li><a href="#">เด็ก</a></li>
+        <li><a class="hover:underline" href="sneakers.php">ทั้งหมด</a></li>
+        <li><a class="hover:underline" href="#">ผู้ชาย</a></li>
+        <li><a class="hover:underline" href="#">ผู้หญิง</a></li>
+        <li><a class="hover:underline" href="#">เด็ก</a></li>
     </ul>
 
     <ul class="flex items-center gap-5">
@@ -20,7 +20,7 @@
             <div id="menu-dropdown" class="absolute hidden right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                 <div class="py-1" role="none">
                   <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">แนะนำ</a>
+                  <a href="sneakers.php" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">ทั้งหมด</a>
                   <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">ผู้ชาย</a>
                   <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">ผู้หญิง</a>
                   <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">เด็ก</a>
@@ -88,3 +88,12 @@
             </a></li>
     </ul>
 </nav>
+
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menuDropdown = document.getElementById("menu-dropdown");
+
+    menuBtn.addEventListener("click", () => {
+        menuDropdown.classList.toggle("hidden");
+    });
+</script>
