@@ -10,7 +10,7 @@
     <div class="px-5 container mx-auto">
         <?php include_once 'header.html'?>
         
-       <div class="w-96 lg:w-1/3 shadow-xl border p-5 rounded-2xl mx-auto mt-5 h-fit">
+       <div class="w-full md:w-96 lg:w-1/3 md:shadow-xl md:border p-5 rounded-2xl mx-auto mt-5 h-fit">
             <label class="text-2xl font-bold block text-center mb-3" for="login">การแก้ไขสินค้า</label>
             <img class="w-40 object-cover mx-auto shadow rounded" id="sneaker-image" alt="product">
             <span id="form-message" class="w-full inline-block text-center text-rose-500"></span>

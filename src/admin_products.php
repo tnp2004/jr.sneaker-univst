@@ -7,7 +7,7 @@
     <title>Admin Products</title>
 </head>
 <body onload="readProduct()">
-    <div class="px-5 container mx-auto">
+    <div class="px-2 md:px-5 container mx-auto">
         <?php include_once 'header.html'?>
 
         <div class="flex justify-between mb-3">
@@ -17,14 +17,14 @@
                 เพิ่มสินค้า
             </a>
         </div>
-        <table class="w-full shadow-xl mb-5">
+        <table class="w-full lg:shadow-xl mb-5">
             <thead>
                 <tr class="bg-gradient-to-r from-amber-400/80 to-yellow-400/80">
                     <th class="first:rounded-tl-md last:rounded-tr-md py-1">รูปภาพ</th>
                     <th class="first:rounded-tl-md last:rounded-tr-md py-1">ไอดี</th>
-                    <th class="text-start first:rounded-tl-md last:rounded-tr-md py-1">ชื่อ</th>
-                    <th class="text-start first:rounded-tl-md last:rounded-tr-md py-1">แบรนด์</th>
-                    <th class="text-start first:rounded-tl-md last:rounded-tr-md py-1">คำอธิบาย</th>
+                    <th class="text-center lg:text-start first:rounded-tl-md last:rounded-tr-md py-1">ชื่อ</th>
+                    <th class="hidden md:table-cell text-start first:rounded-tl-md last:rounded-tr-md py-1">แบรนด์</th>
+                    <th class="hidden md:table-cell text-start first:rounded-tl-md last:rounded-tr-md py-1">คำอธิบาย</th>
                     <th class="text-start first:rounded-tl-md last:rounded-tr-md py-1">ราคา</th>
                     <th class="first:rounded-tl-md last:rounded-tr-md py-1">จำนวนสินค้า</th>
                     <th class="text-start first:rounded-tl-md last:rounded-tr-md py-1">แก้ไข</th>
@@ -59,8 +59,8 @@
                     </td>
                     <td class="text-center">${sneaker.id}</td>
                     <td>${sneaker.name}</td>
-                    <td>${sneaker.brand}</td>
-                    <td>${sneaker.description}</td>
+                    <td class="hidden md:table-cell">${sneaker.brand}</td>
+                    <td class="hidden md:table-cell">${sneaker.description}</td>
                     <td>${sneaker.price}</td>
                     <td class="text-center">${sneaker.inStock}</td>
                     <td><a href="./edit_product.php?id=${sneaker.id}" class="text-emerald-400 p-1 hover:text-emerald-500">
@@ -76,34 +76,31 @@
         }).catch(e => console.log(e))
     }
 
-    const addProduct = () => {
-
-    }
-
     const removeProduct = (id) => {
-    const headers = new Headers();
-    headers.append("Content-Type", "application/json");
-    const body = JSON.stringify({
-        productID: id,
-    });
-    const requestOptions = {
-        method: "POST",
-        headers,
-        body,
-        redirect: "follow",
-    }    
+        if (!confirm("ต้องการลบสินค้าชิ้นนี้ใช่หรือไม่")) return
+        const headers = new Headers();
+        headers.append("Content-Type", "application/json");
+        const body = JSON.stringify({
+            productID: id,
+        });
+        const requestOptions = {
+            method: "POST",
+            headers,
+            body,
+            redirect: "follow",
+        }    
 
-    fetch("http://localhost/jr-sneaker/src/api/delete_sneaker.php", requestOptions)
-    .then(res => res.text())
-    .then(result => {
-        const data = JSON.parse(result);
-        if (data.status == "ok") {
-            readProduct()
-            return
-        }
+        fetch("http://localhost/jr-sneaker/src/api/delete_sneaker.php", requestOptions)
+        .then(res => res.text())
+        .then(result => {
+            const data = JSON.parse(result);
+            if (data.status == "ok") {
+                readProduct()
+                return
+            }
 
-         console.error(data.message)
+            console.error(data.message)
 
-     }).catch(e => console.error(e))
+        }).catch(e => console.error(e))
     }
 </script>

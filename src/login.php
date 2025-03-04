@@ -10,7 +10,7 @@
     <div class="px-5 container mx-auto">
         <?php include_once 'header.html'?>
         
-       <div class="w-72 shadow-xl border p-5 rounded-2xl mx-auto mt-16">
+       <div class="lg:w-72 lg:shadow-xl lg:border p-5 rounded-2xl mx-auto mt-16">
             <label class="text-2xl font-bold block text-center mb-3" for="login">การเข้าสู่ระบบ</label>
             <span id="form-message" class="w-full inline-block text-center text-rose-500"></span>
             <form class="mt-2" onsubmit="return false">

@@ -10,8 +10,8 @@
     <div class="px-5 container mx-auto">
         <?php include_once 'header.html'?>
         
-       <div class="w-96 lg:w-1/3 shadow-xl border p-5 rounded-2xl mx-auto mt-5 h-fit">
-            <label class="text-2xl font-bold block text-center mb-3" for="login">การเพิ่มสินค้า</label>
+       <div class="w-full md:w-96 lg:w-1/3 md:shadow-xl md:border p-5 rounded-2xl mx-auto mt-5 h-fit">
+            <label class="text-2xl font-bold block text-center mb-3" for="add-product">การเพิ่มสินค้า</label>
             <span id="form-message" class="w-full inline-block text-center text-rose-500"></span>
             <form method="POST" action="api/add_sneaker.php" class="mt-2" enctype="multipart/form-data">
                 <label class="text-xl" for="name">ชื่อสินค้า</label>

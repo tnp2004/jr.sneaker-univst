@@ -54,7 +54,7 @@
             </div>
             <!-- watch all product -->
             <div class="text-end mb-5 mt-2">
-                <a href="./sneakers.html" class="group inline-block">
+                <a href="./sneakers.php" class="group inline-block">
                     <label class="text-slate-600 group-hover:cursor-pointer"
                         for="go-all-new-product">ดูสินค้าทั้งหมด</label>
                     <svg class="text-slate-500 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
