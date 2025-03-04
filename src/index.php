@@ -76,15 +76,15 @@
             </div>
             <div class="md:w-3/4 my-10 mx-auto md:flex justify-between gap-2">
                 <div class="flex flex-col justify-end text-center text-lg w-3/5 mx-auto md:w-1/5">
-                    <img class="" src="https://media.discordapp.net/attachments/1274023737662111745/1343867618117029971/e1.png?ex=67bed5c0&is=67bd8440&hm=dc1898e4e4f9f49f87383a812230f3694bde74b196a453b5d17e6b5f69a85b65&=&format=webp&quality=lossless&width=620&height=609" alt="sneaker">
+                    <img class="" src="images/jr-sneaker-footer-1.png" alt="sneaker">
                     <label class="" for="quote">รองเท้าแบรนด์แท้ มือสอง ราคาคุ้มค่า</label>
                 </div>
                 <div class="flex flex-col justify-end text-center text-lg w-3/5 mx-auto md:w-1/5">
-                    <img src="https://media.discordapp.net/attachments/1274023737662111745/1343867617789743104/e2.png?ex=67bed5bf&is=67bd843f&hm=5c43a021b8d77d76121f3bb4ef43144d02f6aa57eeda3668a8c6fabbf465fea4&=&format=webp&quality=lossless&width=571&height=578" alt="sneaker">
+                    <img src="images/jr-sneaker-footer-2.png" alt="sneaker">
                     <label class="" for="quote">ของแท้แน่นอน</label>
                 </div>
                 <div class="flex flex-col justify-end text-center text-lg w-3/5 mx-auto md:w-1/5">
-                    <img src="https://media.discordapp.net/attachments/1274023737662111745/1343867617533759509/e3.png?ex=67bed5bf&is=67bd843f&hm=7904e03d3d089be0af7ae47032f5a3ea5289c02a9abdea11a43e959833fa3c25&=&format=webp&quality=lossless&width=633&height=450" alt="sneaker">
+                    <img src="images/jr-sneaker-footer-3.png" alt="sneaker">
                     <label class="" for="quote">รองเท้ามือสอง สภาพดี</label>
                 </div>
             </div>
