@@ -54,8 +54,8 @@
             for (let sneaker of jsonObj) {
                 const row = `
                 <tr class="odd:bg-white even:bg-gray-100">
-                    <td class="w-20">
-                        <img src="images/products/${sneaker.imageName}" alt="${sneaker.name}" />
+                    <td class="w-20 h-10">
+                        <img class="w-fit" src="images/products/${sneaker.imageName}" alt="${sneaker.name}" />
                     </td>
                     <td class="text-center">${sneaker.id}</td>
                     <td>${sneaker.name}</td>
