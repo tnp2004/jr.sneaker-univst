@@ -18,7 +18,7 @@
                 <label class="hidden md:block md:mb-10" for="price">3,500 บาท</label>
                 <button class="hidden md:block w-fit bg-gradient-to-r from-orange-400 to-amber-400 hover:from-orange-400/80 hover:to-amber-400/80 text-md text-white py-2 px-4">เพิ่มลงตะกร้า</button>
             </div>
-            <a href="./air-max-97" class="md:w-1/2">
+            <a href="./sneaker.php?id=6" class="md:w-1/2">
                 <img src="images/products/air_max_97.webp" alt="sneaker-image">
             </a>
             <div class="md:hidden my-3">
