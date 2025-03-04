@@ -58,6 +58,18 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 }
 
 try {
+    $stmt = $conn->prepare("SELECT image_name FROM sneakers WHERE id = :id");
+    $stmt->bindParam(":id", $id);
+    if (!$stmt->execute()) {
+        http_response_code(400);
+        echo json_encode(["status" => "bad request", "message" => "product not found"]);
+    };
+    $image_name = "";
+
+    foreach ($stmt as $row) {
+        $image_name = $row['image_name'];
+    };
+
     $sqlQuery = "UPDATE sneakers SET name = :name, brand = :brand, description = :description, price = :price, in_stock = :in_stock";
     if ($new_file_name != "") {
         $sqlQuery = $sqlQuery . ", image_name = :image_name";
@@ -75,6 +87,7 @@ try {
     $stmt->bindParam(":id", $id);
 
     if ($stmt->execute()) {
+        unlink("../images/products/".$image_name);
         header('Location: ../admin_products.php');
     } else {
         http_response_code(500);
