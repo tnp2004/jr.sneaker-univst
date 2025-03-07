@@ -87,7 +87,9 @@ try {
     $stmt->bindParam(":id", $id);
 
     if ($stmt->execute()) {
-        unlink("../images/products/".$image_name);
+        if ($new_file_name != "") {
+            unlink("../images/products/".$image_name);
+        };
         header('Location: ../admin_products.php');
     } else {
         http_response_code(500);
