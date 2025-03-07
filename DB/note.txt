@@ -1,0 +1,4 @@
+ตั้งชื่อ Database เป็น jr_sneaker
+
+ชื่อผู้ใช้  admin   
+รหัสผ่าน admin123
