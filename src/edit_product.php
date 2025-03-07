@@ -43,7 +43,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get('id');
 
-        fetch(`http://localhost/jr-sneaker/src/api/read_sneaker.php?id=${id}`)
+        fetch(`http://localhost/jr.sneaker-univst/src/api/read_sneaker.php?id=${id}`)
         .then(res => res.text())
         .then(result => {
             const data = JSON.parse(result)

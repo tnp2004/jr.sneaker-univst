@@ -47,7 +47,7 @@
             redirect: "follow",
         }
 
-        fetch("http://localhost/jr-sneaker/src/api/read_all.php", requestOptions)
+        fetch("http://localhost/jr.sneaker-univst/src/api/read_all.php", requestOptions)
         .then(res => res.text())
         .then(result => {
             var jsonObj = JSON.parse(result);
@@ -90,7 +90,7 @@
             redirect: "follow",
         }    
 
-        fetch("http://localhost/jr-sneaker/src/api/delete_sneaker.php", requestOptions)
+        fetch("http://localhost/jr.sneaker-univst/src/api/delete_sneaker.php", requestOptions)
         .then(res => res.text())
         .then(result => {
             const data = JSON.parse(result);

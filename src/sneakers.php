@@ -108,7 +108,7 @@
         redirect: "follow",
     }
 
-    fetch("http://localhost/jr-sneaker/src/api/read_all.php", requestOptions)
+    fetch("http://localhost/jr.sneaker-univst/src/api/read_all.php", requestOptions)
     .then(res => res.text())
     .then(result => {
         cards.innerHTML = "";

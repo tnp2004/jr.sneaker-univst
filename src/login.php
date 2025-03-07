@@ -53,7 +53,7 @@
             redirect: "follow"
         }
 
-        fetch("http://localhost/jr-sneaker/src/api/login.php", request)
+        fetch("http://localhost/jr.sneaker-univst/src/api/login.php", request)
         .then(response => response.text())
         .then(result => {
             const data = JSON.parse(result)
